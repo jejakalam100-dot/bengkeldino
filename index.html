@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Bengkel Dino Jember - Spesialis replika animatronik dinosaurus dan hewan modern.">
+    <title>BENGKEL DINO - Jember Animatronics</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;800&family=Oswald:wght@500;700&display=swap');
+
+        :root {
+            --primary: #f97316;
+            --dark-bg: #0a0a0a;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--dark-bg);
+            color: #e2e8f0;
+            overflow-x: hidden;
+        }
+
+        .heading-oswald {
+            font-family: 'Oswald', sans-serif;
+            text-transform: uppercase;
+        }
+
+        /* Background Utama Menggunakan Link Terbaru */
+        .hero-section {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.8)), 
+                        url('https://i.ibb.co.com/9HckX8Hg/52843cea-8d2c-4eff-82e5-0b93a92c9e99.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            position: relative;
+        }
+
+        .glass-panel {
+            background: rgba(10, 10, 10, 0.85);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .image-overlay {
+            background: linear-gradient(0deg, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.2) 100%);
+        }
+
+        .photo-container {
+            position: relative;
+            overflow: hidden;
+            background: #1a1a1a;
+            border-radius: 1.5rem;
+        }
+
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: var(--primary);
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s;
+            z-index: 100;
+        }
+
+        .back-to-top.show {
+            opacity: 1;
+            visibility: visible;
+        }
+    </style>
+</head>
+<body id="main-body">
+
+    <a href="#home" id="btn-top" class="back-to-top">
+        <i class="fas fa-chevron-up"></i>
+    </a>
+
+    <!-- Navigasi -->
+    <nav class="fixed w-full z-50 glass-panel py-4 px-6 md:px-12 flex justify-between items-center">
+        <a href="#home" class="flex items-center gap-3">
+            <div class="bg-primary p-2 rounded-lg">
+                <i class="fas fa-dragon text-white text-2xl"></i>
+            </div>
+            <div>
+                <h1 class="heading-oswald text-2xl font-bold tracking-wider leading-none">BENGKEL <span class="text-primary">DINO</span></h1>
+                <p class="text-[10px] tracking-[0.2em] text-gray-400 uppercase">Jember Animatronics & Animal</p>
+            </div>
+        </a>
+        
+        <div class="hidden lg:flex gap-10 text-xs font-bold uppercase tracking-widest">
+            <a href="#home" class="hover:text-primary transition">Beranda</a>
+            <a href="#produk" class="hover:text-primary transition">Produk</a>
+            <a href="#kontak" class="hover:text-primary transition">Kontak</a>
+        </div>
+
+        <div class="flex items-center gap-4">
+            <a href="https://wa.me/6285900097179" target="_blank" class="bg-primary hover:bg-orange-700 text-white px-6 py-3 rounded-full text-xs font-bold uppercase tracking-widest transition shadow-lg flex items-center gap-2">
+                <i class="fab fa-whatsapp text-lg"></i> Hubungi
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="home" class="hero-section min-h-screen flex items-center justify-center px-6 text-center">
+        <div class="max-w-5xl">
+            <div class="inline-block px-4 py-1 border border-primary/50 rounded-full mb-6 bg-black/30 backdrop-blur-md">
+                <span class="text-primary text-[10px] font-bold tracking-[0.5em] uppercase">Professional Workshop Jember</span>
+            </div>
+            <h2 class="heading-oswald text-5xl md:text-8xl font-bold mb-8 leading-none">ANIMATRONIK <br><span class="text-white text-4xl md:text-7xl">DINO & ANIMAL</span></h2>
+            <p class="text-white text-lg md:text-xl max-w-3xl mx-auto mb-12 leading-relaxed font-medium drop-shadow-lg">
+                Spesialis pembuatan replika dinosaurus dan hewan dengan sistem mekanik robotik canggih. Langsung dari workshop kami di Jember.
+            </p>
+            <div class="flex flex-wrap justify-center gap-6">
+                <a href="#produk" class="bg-white text-black px-10 py-4 rounded-full font-bold uppercase text-sm tracking-widest hover:bg-primary hover:text-white transition-all shadow-xl">
+                    Lihat Produk
+                </a>
+                <a href="https://wa.me/6285900097179" target="_blank" class="border-2 border-white text-white px-10 py-4 rounded-full font-bold uppercase text-sm tracking-widest hover:bg-white hover:text-black transition-all">
+                    Tanya Harga
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Produk Section -->
+    <section id="produk" class="py-24 bg-[#050505]">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="heading-oswald text-4xl font-bold uppercase">Koleksi <span class="text-primary">Produksi</span></h2>
+                <div class="h-1 w-20 bg-primary mx-auto mt-4"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                <article class="photo-container group h-[500px] shadow-2xl">
+                    <img src="https://images.unsplash.com/photo-1517922193564-639537b9f30c?q=80&w=800&auto=format&fit=crop" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-500">
+                    <div class="absolute inset-0 image-overlay flex flex-col justify-end p-10">
+                        <h4 class="heading-oswald text-3xl font-bold">T-Rex</h4>
+                        <p class="text-primary font-bold text-sm">REALISTIC MOVEMENT</p>
+                    </div>
+                </article>
+
+                <article class="photo-container group h-[500px] shadow-2xl">
+                    <img src="https://images.unsplash.com/photo-1582967788606-a171c1080cb0?q=80&w=800&auto=format&fit=crop" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-500">
+                    <div class="absolute inset-0 image-overlay flex flex-col justify-end p-10">
+                        <h4 class="heading-oswald text-3xl font-bold">Triceratops</h4>
+                        <p class="text-primary font-bold text-sm">HORN & HEAD ACTION</p>
+                    </div>
+                </article>
+
+                <article class="photo-container group h-[500px] shadow-2xl">
+                    <img src="https://images.unsplash.com/photo-1505330622279-bf7d7fc918f4?q=80&w=800&auto=format&fit=crop" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-500">
+                    <div class="absolute inset-0 image-overlay flex flex-col justify-end p-10">
+                        <h4 class="heading-oswald text-3xl font-bold">Elephant</h4>
+                        <p class="text-primary font-bold text-sm">ANIMAL REPLICA</p>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Kontak Section -->
+    <section id="kontak" class="py-24 bg-primary px-6">
+        <div class="container mx-auto max-w-4xl text-center bg-black p-12 md:p-20 rounded-[3rem] shadow-2xl">
+            <h2 class="heading-oswald text-4xl md:text-6xl font-bold mb-6 italic">ORDER <br><span class="text-primary">SEKARANG</span></h2>
+            <p class="text-gray-400 mb-10">Konsultasikan kebutuhan wahana hiburan Anda dengan tim ahli kami.</p>
+            <a href="https://wa.me/6285900097179" target="_blank" class="bg-primary hover:bg-orange-700 text-white px-12 py-5 rounded-full font-bold uppercase tracking-widest transition inline-flex items-center gap-4 shadow-xl text-lg">
+                <i class="fab fa-whatsapp text-2xl"></i> WHATSAPP: 085900097179
+            </a>
+            <p class="mt-12 text-gray-500 text-xs uppercase tracking-widest">BENGKEL DINO - Jember, Jawa Timur</p>
+        </div>
+    </section>
+
+    <footer class="py-12 text-center bg-[#050505] border-t border-white/5">
+        <p class="text-gray-600 text-[10px] tracking-[0.3em] uppercase">
+            &copy; 2024 BENGKEL DINO & ANIMAL JEMBER. ALL RIGHTS RESERVED.
+        </p>
+    </footer>
+
+    <script>
+        const btnTop = document.getElementById('btn-top');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 500) btnTop.classList.add('show');
+            else btnTop.classList.remove('show');
+        });
+    </script>
+</body>
+</html>
